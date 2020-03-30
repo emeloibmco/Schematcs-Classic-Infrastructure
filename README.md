@@ -15,7 +15,7 @@ Accedes a **Schematics** para acceder a la herramienta de Intrastructure as Code
 _Necesitas una cuenta en IBM Cloud_
 
 
-### Código 🔧
+### Pasos de acceso a api_softlayer 🔧
 
 _En este codigo se tiene que tener en cuenta 
 _Para obtener la apikey_softlayer se debe ir a **Access(IAM)>Users>"Tu usuario">Classic infrastructure"**_
