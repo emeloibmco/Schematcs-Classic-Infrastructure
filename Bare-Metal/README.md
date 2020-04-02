@@ -1,13 +1,17 @@
-# Schematcs-Classic-Infrastructure
+# BareMetal guide - Schematics IBM Cloud
 
-_Este proyecto se raliza con el provider de Terrafor e IBM Cloud para Infrastructure as Code 
-Se aprovisiona un BareMetal en la plataforma Cloud con ayuda de la herramienta Schematics._
+_Ejemplo de BareMetal en Infraestructura clásica usando IaC en Schematics_
+
+
 
 ## Comenzando 🚀
 
 _Instrucciones_
 
-Accedes a **Schematics** para acceder a la herramienta de Intrastructure as Code.
+Para el aprovisionamiento de un BareMetal se debe contar con minimo 3 archivos en GITHUB los cuales son:
+- variable.tf = Contiene las variables de llaves y nombres unicos que el cliente introduce en su servicio
+- recursos.tf = Solicita aprovisionamiento del servicio que se requiere (en este caso BareMetal)
+- provider.tf = Instalador de provider IBM sobre Schematics
 
 
 ### Pre-requisitos 📋
