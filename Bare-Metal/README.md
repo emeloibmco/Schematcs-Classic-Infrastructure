@@ -1,6 +1,6 @@
 # BareMetal guide - Schematics IBM Cloud
 
-_Ejemplo de BareMetal en Infraestructura clásica usando IaC en Schematics_
+_Ejemplo de BareMetal con facturación por **HORAS** en Infraestructura clásica usando IaC en Schematics con el provvider de Terraform_
 
 ![BareMetal-Architecture](baremetal.JPG)
 
@@ -16,12 +16,16 @@ Para el aprovisionamiento de un BareMetal se debe contar con minimo 3 archivos e
 
 ### Variable.tf 📋
 
-En este codigo se cuenta con las siguientes variables:
+El aprovisionamiento de un BareMetal con el provider terraform requiere de por lo menos las siguientes variables:
 
 | Variable | Información |
 | ------------- | ------------- |
 | **ibmcloud_apikey**  | [API key](https://cloud.ibm.com/docs/iam?topic=iam-userapikey) unica del usuario que se requiere para aprovisionamiento de recursos |
-| Contenido de la celda  | Contenido de la celda  |
+| **ibm_region**  | Region en la que se encuentra ubicado el datacenter donde se aprovisionará el recurso |
+| **resource_group** | Grupo de recursos en cual se aprovisiona el recurso |
+| **bm_hostname** | Nombre del BareMetal a provisionar _No mayusculas_ |
+| **os_reference** | Referencia del sistema operativo a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida|
+|**datacenter**| Datacenter en el cual se aprovisionará el BareMetal|
 
 _Necesitas una cuenta en IBM Cloud_
 
