@@ -2,6 +2,8 @@
 
 _Este repositorio cuenta con la guia para diversas aplicaciones de Classic Infrastructure en  IBM CLoud con la herramienta Schematics_
 
+![BareMetal-Architecture](baremetal.JPG)
+
 ## Contenido 📋
 
 1. BareMetal Code guide
