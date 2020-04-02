@@ -40,7 +40,7 @@ Para acceder a información de **api softlayer** se requiere de la [APIkey-Class
 
 Se debe dirigir al simbolo de ![](menu.JPG) en donde encontrará la opción de **Schematics** una vez alli se creará un nuevo workspace donde se contará con la siguiente pestaña:
 
-
+<img width="945" alt="workspace" src="workspace.JPG">
 
 ---
 ⌨️ con ❤️ por Fernando Coy 😊
