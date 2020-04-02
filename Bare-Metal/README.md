@@ -14,7 +14,14 @@ Para el aprovisionamiento de un BareMetal se debe contar con minimo 3 archivos e
 - provider.tf = Instalador de provider IBM sobre Schematics
 
 
-### Pre-requisitos 📋
+### Variable.tf 📋
+
+En este codigo se cuenta con las siguientes variables:
+
+| Variable | Información |
+| ------------- | ------------- |
+| **ibmcloud_apikey**  | [API key](https://cloud.ibm.com/docs/iam?topic=iam-userapikey) unica del usuario que se requiere para aprovisionamiento de recursos |
+| Contenido de la celda  | Contenido de la celda  |
 
 _Necesitas una cuenta en IBM Cloud_
 
