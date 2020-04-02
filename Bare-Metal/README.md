@@ -2,7 +2,7 @@
 
 _Ejemplo de BareMetal en Infraestructura clásica usando IaC en Schematics_
 
-(https://github.com/emeloibmco/Schematics-Classic-Infrastructure-BareMetal/blob/master/Bare-Metal/baremetal.JPG)
+![BareMetal-Architecture](https://github.com/emeloibmco/Schematics-Classic-Infrastructure-BareMetal/blob/master/Bare-Metal/baremetal.JPG)
 
 ## Comenzando 🚀
 
