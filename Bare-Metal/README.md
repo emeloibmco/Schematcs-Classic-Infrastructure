@@ -38,11 +38,11 @@ Para acceder a información de **api softlayer** se requiere de la [APIkey-Class
 
 ### Pasos para el despliegue en Schematics 🔧
 
-Se debe dirigir al simbolo de ![](/images/menu.JPG) en donde encontrará la opción de **Schematics** una vez alli se creará un nuevo workspace donde se contará con la siguiente pestaña:
-<img width="945" alt="workspace" src="/images/workspace.JPG">
+Se debe dirigir al simbolo de ![](images/menu.JPG) en donde encontrará la opción de **Schematics** una vez alli se creará un nuevo workspace donde se contará con la siguiente pestaña:
+<img width="945" alt="workspace" src="images/workspace.JPG">
 
 En el espacio sobremarcado con rojo se debe pegar el link del repositorio y de ser necesario en la parte de abajo el Token para permisos de acceso. Se presiona el botón sobremarcado con amarillo para adquirir las variables a rellenar. Luego de rellenarlas se debe crear el workspace. En caso de realizar el procedimiento de forma correcta se contará con la siguiente pestaña:
-<img width="945" alt="workspace" src="/images/workspace1.JPG">
+<img width="945" alt="workspace" src="images/workspace1.JPG">
 
 Se debe generar el plan con el botón que aparece en pantalla y de generarse correctamente se podrá aplicar el plan. _Solo hasta aplicar el plan se va a generar facturación_
 
