@@ -14,7 +14,7 @@ Para el aprovisionamiento de un BareMetal se debe contar con minimo 3 archivos e
 - provider.tf = Instalador de provider IBM sobre Schematics
 
 
-### Variable.tf 📋
+### variables 📋
 
 El aprovisionamiento de un BareMetal con el provider terraform requiere de por lo menos las siguientes variables:
 
@@ -23,17 +23,22 @@ El aprovisionamiento de un BareMetal con el provider terraform requiere de por l
 | **ibmcloud_apikey**  | [API key](https://cloud.ibm.com/docs/iam?topic=iam-userapikey) unica del usuario que se requiere para aprovisionamiento de recursos |
 | **ibm_region**  | Region en la que se encuentra ubicado el datacenter donde se aprovisionará el recurso |
 | **resource_group** | Grupo de recursos en cual se aprovisiona el recurso |
-| **bm_hostname** | Nombre del BareMetal a provisionar _No mayusculas_ |
+| **hostname** | Nombre del BareMetal a provisionar _No mayusculas_ |
 | **os_reference** | Referencia del sistema operativo a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida|
-|**datacenter**| Datacenter en el cual se aprovisionará el BareMetal|
+|**datacenter**| [Datacenter](https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json) en el cual se aprovisionará el BareMetal |
+| **domain** | Dominio del Baremetal ´nombre del dominio´.cloud.com |
+| **network_speed** | Velocidad de la red |
+| **private_network** | Si se requiere de un enlace a la red publica se coloca _false_ de lo contrario _true_ |
+| **notes** | Notas de información del BareMetal |
+| **fixed_config_preset** | [Procesador del BareMetal](https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json) Cores y memoria RAM  |
 
-_Necesitas una cuenta en IBM Cloud_
+
+Para acceder a información de **api softlayer** se requiere de la [APIkey-ClassicInfrastructure](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys&locale=es) y el usuario de la cuenta 
 
 
-### Pasos de acceso a api_softlayer 🔧
+### Pasos para el despliegue en Schematics 🔧
 
-_En este codigo se tiene que tener en cuenta 
-_Para obtener la apikey_softlayer se debe ir a **Access(IAM)>Users>"Tu usuario">Classic infrastructure"**_
+Se debe dirigir al simbolo de ![](menu.JPG) en donde encontrará la opción de **Schematics** una vez alli se creará un nuevo workspace donde se contará con la siguiente pestaña:
 
 
 
