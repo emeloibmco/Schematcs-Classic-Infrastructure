@@ -2,7 +2,7 @@
 
 _Ejemplo de BareMetal con facturación por **HORAS** en Infraestructura clásica usando IaC en Schematics con el provvider de Terraform_
 
-<img width="940" alt="BareMetal-Architecture" scr="baremetal.JPG">
+<img width="940" alt="BareMetal-Architecture" src="baremetal.JPG">
 
 ## Comenzando 🚀
 
