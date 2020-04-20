@@ -24,8 +24,7 @@ El aprovisionamiento de un BareMetal mensual con el provider terraform cuenta co
 | **ibm_region**  | Region en la que se encuentra ubicado el datacenter donde se aprovisionará el recurso |
 | **resource_group** | Grupo de recursos en cual se aprovisiona el recurso |
 | **hostname** | Nombre del BareMetal a provisionar _No mayusculas_ |
-| **os_key_name** | [Referencia del paquete de sistemas operativos] a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida
-- OS_WINDOWS_SERVER_2019_DATACENTER_EDITION_64BIT ( Windows Server 2019 Datacenter Edition (64 bit) )
+| **os_key_name** | [Referencia del paquete de sistemas operativos] a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida - OS_WINDOWS_SERVER_2019_DATACENTER_EDITION_64BIT ( Windows Server 2019 Datacenter Edition (64 bit) )
 - OS_RHEL_FOR_SAP_BUSINESS_APPLICATION_7_X_64_BIT ( Red Hat Enterprise Linux for SAP Business Application 7.x (64 bit) )
 - OS_SUSE_LINUX_ENTERPRISE_SERVER_15_FOR_SAP_APPLICATIONS ( SUSE Linux Enterprise Server 15 for SAP Applications ) 
 - OS_RHEL_FOR_SAP_BUSINESS_APPLICATION_6_5_64_BIT ( Red Hat Enterprise Linux for SAP Business Application 6.x (64 bit) )
