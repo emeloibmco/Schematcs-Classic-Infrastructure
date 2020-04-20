@@ -22,20 +22,17 @@ El aprovisionamiento de un BareMetal mensual con el provider terraform cuenta co
 | ------------- | ------------- |
 | **ibmcloud_apikey**  | [API key](https://cloud.ibm.com/docs/iam?topic=iam-userapikey) unica del usuario que se requiere para aprovisionamiento de recursos |
 | **ibm_region**  | Region en la que se encuentra ubicado el datacenter donde se aprovisionará el recurso |
-| **resource_group** | Grupo de recursos en cual se aprovisiona el recurso |
 | **hostname** | Nombre del BareMetal a provisionar _No mayusculas_ |
-| **os_key_name** | [Referencia del paquete de sistemas operativos] a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida|
+| **os_key_name** | Referencia del paquete de sistemas operativos a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida)|
 | **package_key** | [Script con nombres clave de paquetes de procesador](https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}}) a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida|
 | **process_key_name** | [Script con nombres clave de procesador](https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}}) a instalar sobre el BareMetal (Depende de la capacidad del procesador elegida|
-| **memory** | Memoria RAM requerida para |
+| **memory** | Memoria RAM|
 |**datacenter**| [Datacenter](https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json) en el cual se aprovisionará el BareMetal |
 | **domain** | Dominio del Baremetal ´nombre del dominio´.cloud.com |
 | **network_speed** | Velocidad de la red |
 | **private_network** | Si se requiere de un enlace a la red publica se coloca _false_ de lo contrario _true_ |
 | **notes** | Notas de información del BareMetal |
-| **disk_key_name** | [Nombre clave de disco(s)]
-de almacenamiento 
-
+| **disk_key_name** | Nombre clave de disco(s) de almacenamiento |
 
 
 Para acceder a información de **api softlayer** se requiere de la [APIkey-ClassicInfrastructure](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys&locale=es) y el usuario de la cuenta 
