@@ -50,7 +50,3 @@ variable "processor" {
 variable "key_process" {
   default = "INTEL_SINGLE_XEON_1270_3_50"
   }
-
-variable "hourly_billing" {
-  description = "Billing true or false (Monthly - Hourly)"
-}
