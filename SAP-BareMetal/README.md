@@ -14,7 +14,7 @@ Para el aprovisionamiento de un BareMetal-SAP se requiere facturación mensual l
 - provider.tf = Instalador de provider IBM sobre Schematics
 
 
-### variables 📋
+### Variables 📋
 
 El aprovisionamiento de un BareMetal mensual con el provider terraform cuenta con las siguientes caracteristicas:
 
