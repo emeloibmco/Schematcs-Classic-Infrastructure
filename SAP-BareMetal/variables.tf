@@ -46,3 +46,9 @@ variable "processor" {
 variable "key_process" {
   default = "INTEL_SINGLE_XEON_1270_3_50"
   }
+
+variable "disk_key_name" {
+  description =" More info in Readme"
+  default = "HARD_DRIVE_2_00_TB_SATA_2"
+  }
+
