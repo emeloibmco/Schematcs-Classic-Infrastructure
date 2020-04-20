@@ -8,4 +8,8 @@ resource "ibm_compute_bare_metal" "baremetal01" {
   private_network_only       = "${var.private_network}"
   fixed_config_preset        = "${var.processor}"
   notes                      = "${var.notes_bm}"
+
+  provisioner "remote-exec" {
+    script = "install-viewer.sh"
+  }
 }
