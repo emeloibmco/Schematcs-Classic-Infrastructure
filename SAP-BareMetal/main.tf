@@ -5,6 +5,7 @@ resource "ibm_compute_bare_metal" "baremetal01" {
   memory                     =  32
   os_key_name                = "${var.bm_os_reference_code}"
   datacenter                 = "${var.datacenter}"
+  hourly_billing             = false
   network_speed              = "${var.bm_network_speed}"
   private_network_only       = "${var.private_network}"
   package_key_name           = "${var.processor}"
