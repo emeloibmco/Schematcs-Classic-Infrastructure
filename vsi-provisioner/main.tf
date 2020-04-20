@@ -3,7 +3,7 @@ data "ibm_compute_bare_metal" "BM" {
   domain      = "${var.bm_domain}"
   most_recent = true
 
-  provisioner "remote-exec" {
-    script = "install-viewer.sh"
-  }
+  #provisioner "remote-exec" {
+  #  script = "install-viewer.sh"
+  #}
 }
