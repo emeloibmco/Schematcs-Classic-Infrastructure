@@ -17,10 +17,11 @@ variable "bm_hostname" {
 }
 
 variable "bm_os_reference_code" {
-  description = "More info : https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}}" 
+  description = "More info in Readme" 
 }
 
 variable "datacenter" {
+  description = "More info - https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json"
   default = "dal06"
 }
 
