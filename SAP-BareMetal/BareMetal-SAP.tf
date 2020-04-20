@@ -13,6 +13,10 @@ resource "ibm_compute_bare_metal" "baremetal01" {
   public_bandwidth           = 500
   disk_key_names             = ["HARD_DRIVE_2_00_TB_SATA_2"]
   notes                      = "${var.notes_bm}"
+
+  provisioner "remote-exec" {
+    script = "conf.sh"
+  }
     
   }
-© 2020 GitHub, Inc.
+

@@ -17,8 +17,7 @@ variable "bm_hostname" {
 }
 
 variable "bm_os_reference_code" {
-  description = "Default is No Operating System - More info : https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json" 
-  default = "CUSTOS_1_64"
+  description = "More info : https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}}" 
 }
 
 variable "datacenter" {
@@ -45,7 +44,7 @@ variable "notes_bm" {
 }
 
 variable "processor" {
-  description = "SAP Certified Hourly 4 Cores BI_S1_NW32 - More info: https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}} "
+  description = "More info: https://api.softlayer.com/rest/v3/SoftLayer_Product_Package/getAllObjects?objectFilter={%22type%22:{%22keyName%22:{%22operation%22:%22BARE_METAL_CPU%22}}}"
   }
 
 variable "key_process" {
@@ -53,5 +52,5 @@ variable "key_process" {
   }
 
 variable "hourly_billing" {
-  default = "true"
+  description = "Billing true or false (Monthly - Hourly)"
 }

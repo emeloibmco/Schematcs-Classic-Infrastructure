@@ -1,3 +1,4 @@
+# Configuración del provider con APIKEY y la región a trabajar
 provider ibm {
   ibmcloud_api_key      = "${var.ibmcloud_apikey}"
   region                = "${var.ibm_region}"
@@ -5,13 +6,3 @@ provider ibm {
   ibmcloud_timeout      = 60
 }
 
-##############################################################################
-
-
-##############################################################################
-#Resource Group
-##############################################################################
-
-data ibm_resource_group resource_group {
-  name = "${var.resource_group}"
-  }
