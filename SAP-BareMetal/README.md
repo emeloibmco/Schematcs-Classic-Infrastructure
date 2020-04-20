@@ -2,7 +2,7 @@
 
 _Ejemplo de BareMetal-SAP con facturación por **MENSUAL** en Infraestructura clásica usando IaC en Schematics con el provvider de Terraform_
 
-<img width="940" alt="BareMetal-Architecture" src="baremetal.jpg">
+<img width="940" alt="BareMetal-Architecture" src="images/baremetal.jpg">
 
 ## Comenzando 🚀
 
