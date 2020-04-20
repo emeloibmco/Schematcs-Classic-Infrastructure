@@ -11,7 +11,7 @@ resource "ibm_compute_bare_metal" "baremetal01" {
   package_key_name           = "${var.processor}"
   process_key_name           = "${var.key_process}"
   public_bandwidth           = 500
-  disk_key_names             = ["HARD_DRIVE_2_00_TB_SATA_2"]
+  disk_key_names             = ["${var.disk_key_name}"]
   notes                      = "${var.notes_bm}"
     
   }
