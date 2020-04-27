@@ -25,7 +25,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   connection {
     type = "ssh"
     user = "root"
-    private_key = "${file("/Users/acoyp/Desktop/vsi")}"
+    private_key = "${file("C:/Users/acoyp/Desktop/vsi")}"
   }
 
   provisioner "remote-exec" {
