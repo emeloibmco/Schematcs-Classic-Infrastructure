@@ -4,8 +4,8 @@ provider "ibm" {
 }
 
 resource "ibm_compute_vm_instance" "terraform_p_sample" {
-  hostname                   = "vsi_provisioner"
-  domain                     = "ibm.cloud_landingzone.com"
+  hostname                   = "vsi01-provisioner"
+  domain                     = "ibm.cloud-landingzone.com"
   os_reference_code          = "${var.os_reference}"
   datacenter                 = "${var.datacenter}"
   network_speed        = 100
