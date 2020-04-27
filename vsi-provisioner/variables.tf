@@ -1,7 +1,13 @@
-variable "bm_hostname" {
-    description = "Ingrese el hostname del BareMetal"
+variable "ibmcloud_api_key" {
+  description = "Enter your IBM Cloud API Key, you can get your IBM Cloud API key using: https://console.bluemix.net/iam#/apikeys"
 }
 
-variable "bm_domain" {
-    description = "Ingrese el dominio del BareMetal"
+variable "os_reference" {
+  description = ""
+  default = "UBUNTU_18_64"
+}
+
+variable "datacenter" {
+  description = ""
+  default = "dal10"
 }
