@@ -29,6 +29,11 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   }
 
   provisioner "remote-exec" {
-    script = "install-viewer.sh"
+    inline = [
+      "yes | sudo apt-get update", 
+      "cd ..",
+      "touch data.txt", 
+      "echo 'Esta es una demo provisioner remote-exec' >> data.txt"
+    ]
   }
 }

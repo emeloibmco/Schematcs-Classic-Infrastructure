@@ -1,4 +1,4 @@
-#!/bin/bash -v
+#!/bin/bash
 yes | sudo apt-get update
 cd ..
 touch data.txt 
