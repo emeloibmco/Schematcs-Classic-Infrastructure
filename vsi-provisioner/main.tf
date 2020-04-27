@@ -3,7 +3,7 @@ provider "ibm" {
 
 }
 
-resource "ibm_compute_vm_instance" "twc_terraform_sample" {
+resource "ibm_compute_vm_instance" "terraform_p_sample" {
   hostname                   = "vsi_provisioner"
   domain                     = "ibm.cloud_landingzone.com"
   os_reference_code          = "${var.os_reference}"
