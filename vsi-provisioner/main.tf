@@ -22,6 +22,11 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   local_disk           = false
   ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
 
+  connection {
+    type = "ssh"
+    user = "root"
+    private_key = "${file("~/vsi")}"
+  }
 
   provisioner "remote-exec" {
     script = "install-viewer.sh"
