@@ -7,7 +7,7 @@ variable "function_namespace" {
 }
 
 provider "ibm" {
-  ibmcloud_api_key   = var.ibmcloud_api_key
-  function_namespace = var.function_namespace
+  ibmcloud_api_key   = "${var.ibmcloud_api_key}"
+  function_namespace = "${var.function_namespace}"
 }
 
