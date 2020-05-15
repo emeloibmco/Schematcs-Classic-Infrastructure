@@ -1,7 +1,7 @@
 resource "null_resource" "prepare_app_zip" {
   triggers = {
-    app_version = ${var.app_version}
-    git_repo    = ${var.git_repo}
+    app_version = "${var.app_version}"
+    git_repo    = "${var.git_repo}"
   }
 
   provisioner "local-exec" {
