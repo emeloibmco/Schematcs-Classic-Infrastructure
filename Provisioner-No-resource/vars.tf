@@ -74,7 +74,5 @@ variable "app_command" {
   default = "python app.py"
 }
 
-variable "buildpack" {
-  default = ""
-}
+
 
