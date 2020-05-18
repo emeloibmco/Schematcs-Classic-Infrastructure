@@ -1,20 +1,24 @@
-resource "null_resource" "prepare_app_zip" {
-  triggers = {
-    app_version = "${var.app_version}"
-    git_repo    = "${var.git_repo}"
-  }
+resource "ibm_compute_vm_instance" "terraform_p_sample" {
+  hostname                   = "vsi01-provisioner"
+  domain                     = "ibm.cloud-landingzone.com"
+  os_reference_code          = "${var.os_reference}"
+  datacenter                 = "${var.datacenter}"
+  network_speed        = 100
+  hourly_billing       = true
+  private_network_only = false
+  cores                = 1
+  memory               = 1024
+  disks                = [25]
+  local_disk           = false
+  ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
 
-  provisioner "local-exec" {
-    command = <<EOF
-        mkdir -p ${var.dir_to_clone}
-        cd ${var.dir_to_clone}
-        git init
-        git remote add origin ${var.git_repo}
-        git fetch
-        git checkout -t origin/master
-        zip -r ${var.app_zip} *
-        
-EOF
-
+  provisioner "remote-exec" {
+    inline = [
+      "wget -O /tmp/chef.rpm https://MYSERVER/chef_installers/chef-15.8.23-1.el7.x86_64.rpm",
+      "rpm -Uvh /tmp/chef.rpm",
+      "wget -O /tmp/base.tgz https://MYSERVER/policyfiles/base.tgz",
+      "tar -C /tmp -xzf /tmp/base.tgz",
+      "PWD=/tmp/base chef-client -z"
+    ]
   }
 }
