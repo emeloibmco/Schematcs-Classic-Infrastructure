@@ -11,7 +11,3 @@ variable "datacenter" {
   description = ""
   default = "dal10"
 }
-
-variable "ibmcloud_api_key" {
-  description = "Your IBM Cloud platform API key"
-}
