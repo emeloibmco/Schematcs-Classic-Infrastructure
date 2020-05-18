@@ -10,7 +10,6 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   memory               = 1024
   disks                = [25]
   local_disk           = false
-  ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
 
   provisioner "remote-exec" {
     inline = [
