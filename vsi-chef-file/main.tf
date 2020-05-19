@@ -37,7 +37,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
       "echo yes | chef generate repo chef-repo",
       "chef generate cookbook chef-repo/cookbooks/cookbooktest",
       "cat <<EOT >> chef-repo/cookbooks/cookbooktest/recipes/default.rb",
-      "file "#{ENV['HOME']}/test.txt" do",
+      "file"+ "#{ENV['HOME']}/test.txt"+ "do",
       "  content 'This file was created by Chef Infra!'",
       "end",
       "EOT",
