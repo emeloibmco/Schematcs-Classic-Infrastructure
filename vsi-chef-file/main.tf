@@ -9,7 +9,7 @@ resource "ibm_compute_ssh_key" "ssh_key_bin" {
 }
 
 resource "ibm_compute_vm_instance" "terraform_p_sample" {
-  hostname                   = "vsi01-provisioner"
+  hostname                   = "vsi02-chef"
   domain                     = "ibm.cloud-landingzone.com"
   os_reference_code          = "${var.os_reference}"
   datacenter                 = "${var.datacenter}"
