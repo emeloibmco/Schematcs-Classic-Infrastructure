@@ -2,11 +2,11 @@ provider "ibm" {
   ibmcloud_api_key    = "${var.ibmcloud_api_key}"
 
 }
-
+/* 
 resource "ibm_compute_ssh_key" "ssh_key_bin" {
   label      = "${var.ssh_label}"
   public_key = "${var.ssh_public_key}"
-}
+} */
 
 resource "ibm_compute_vm_instance" "terraform_p_sample" {
   hostname                   = "vsi01-provisioner"
