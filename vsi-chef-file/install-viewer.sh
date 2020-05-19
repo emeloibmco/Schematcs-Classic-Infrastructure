@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/bash -v
 yes | sudo apt-get update
 cd ..
 wget -nv -P /downloads https://packages.chef.io/files/stable/chef-workstation/0.18.3/ubuntu/18.04/chef-workstation_0.18.3-1_amd64.deb

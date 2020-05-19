@@ -20,7 +20,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   memory               = 1024
   disks                = [25]
   local_disk           = false
-  post_install_script_uri  = "https://raw.githubusercontent.com/emeloibmco/Schematics-Classic-Infrastructure-BareMetal/master/vsi-chef-file/install-viewer.sh"
+  post_install_script_uri  = "https://github.com/emeloibmco/Schematics-Classic-Infrastructure-BareMetal/blob/master/vsi-chef-file/install-viewer.sh"
   
 
 }
