@@ -36,7 +36,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
       "dpkg -i /downloads/chef-workstation_0.18.3-1_amd64.deb",
       "echo yes | chef generate repo chef-repo",
       "cd chef-repo/cookbooks",
-      "git clone https://github.com/JulianaLeonGonzalez/cookbook.git",
+      "git clone ${var.cookbook}",
       "cd ..",
       "chef-client --local-mode --override-runlist cookbook"
     ]

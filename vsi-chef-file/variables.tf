@@ -22,3 +22,7 @@ variable "ssh_public_key" {
 variable "private_key" {
   
 }
+
+variable "cookbook" {
+  
+}
