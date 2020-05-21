@@ -9,7 +9,7 @@ resource "ibm_compute_ssh_key" "ssh_key_bin" {
 }
 
 resource "ibm_compute_vm_instance" "terraform_p_sample" {
-  hostname                   = "vsi02-chef"
+  hostname                   = "vsi03-chef"
   domain                     = "ibm.cloud-landingzone.com"
   os_reference_code          = "${var.os_reference}"
   datacenter                 = "${var.datacenter}"
@@ -36,9 +36,9 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
       "dpkg -i /downloads/chef-workstation_0.18.3-1_amd64.deb",
       "echo yes | chef generate repo chef-repo",
       "cd chef-repo/cookbooks",
-      "git clone ${var.cookbook}",
+      "git clone ${var.cookbook_git}",
       "cd ..",
-      "chef-client --local-mode --override-runlist cookbook"
+      "chef-client --local-mode --override-runlist ${var.cookbook_name}"
     ]
   }
 }

@@ -23,6 +23,10 @@ variable "private_key" {
   
 }
 
-variable "cookbook" {
-  
+variable "cookbook_git" {
+  description = "Ingresa la dirección URL del GITHUB que contiene el cookbook "
+}
+
+variable "cookbook_name" {
+  description = "Ingresa el nombre del cookbook a ejecutar"
 }
