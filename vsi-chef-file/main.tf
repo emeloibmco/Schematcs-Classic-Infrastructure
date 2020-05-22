@@ -1,7 +1,3 @@
-provider "ibm" {
-  ibmcloud_api_key    = "${var.ibmcloud_api_key}"
-
-}
 
 resource "ibm_compute_ssh_key" "ssh_key_bin" {
   label      = "${var.ssh_label}"
@@ -9,18 +5,18 @@ resource "ibm_compute_ssh_key" "ssh_key_bin" {
 }
 
 resource "ibm_compute_vm_instance" "terraform_p_sample" {
-  hostname                   = "vsi03-chef"
-  domain                     = "ibm.cloud-landingzone.com"
+  hostname                   = "${var.hostname}"
+  domain                     = "${var.domain}"
   os_reference_code          = "${var.os_reference}"
   datacenter                 = "${var.datacenter}"
-  network_speed        = 100
-  hourly_billing       = true
-  private_network_only = false
-  cores                = 1
-  memory               = 1024
-  disks                = [25]
-  local_disk           = false
-  ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
+  network_speed              = "${var.network_speed}"
+  hourly_billing             = "${var.hourly_billing}"
+  private_network_only       = "${var.network_mode}"
+  cores                      = "${var.cores}"
+  memory                     = "${var.memory}"
+  disks                      = [25]
+  local_disk                 = false
+  ssh_key_ids                = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
 
   connection {
     type = "ssh"
