@@ -5,3 +5,7 @@ provider "vsphere" {
   vsphere_server = "${var.ip_address}"
 
 }
+
+datos "vsphere_datacenter" "dc" {
+  nombre = "DC"
+}
