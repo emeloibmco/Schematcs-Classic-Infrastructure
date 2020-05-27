@@ -7,5 +7,5 @@ provider "vsphere" {
 }
 
 datos "vsphere_datacenter" "dc" {
-  nombre = "DC"
+  name = "${var.datacenter}"
 }
