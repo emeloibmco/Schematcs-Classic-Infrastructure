@@ -1,10 +1,9 @@
 
-provider "vsphere" {
-
-  user           = "${var.user_vsphere}"
-  password       = "${var.vsphere_password}"
-  vsphere_server = "${var.ip_address}"
-  allow_unverified_ssl = true
+provider "esxi" {
+  esxi_hostname      = "${var.ip_address}"
+  esxi_hostport      = "443"
+  esxi_username      = "${var.user_vsphere}"
+  esxi_password      = "${var.vsphere_password}"
 
 }
 
