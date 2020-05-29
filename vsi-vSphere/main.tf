@@ -39,7 +39,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
       "install-module -name VMware.PowerCLI -Force",
       "Set-PowerCLIConfiguration -InvalidCertificateAction ignore -confirm:$false",
       "Connect-VIServer -Server ${var.vsphere_ip} -Protocol https -User ${var.vsphere_user} -Password ${var.vsphere_passwd}",
-      "New-VM -Name ${var.vm-vsphere} -VMHost ${var.vsphere_ip} -ResourcePool Resources -DiskGB ${var.vsphere_disk} -DiskStorageFormat Thin -DataStore datastore1 -MemoryGB ${var.vsphere_memory}",
+      "New-VM -Name ${var.vm_vsphere} -VMHost ${var.vsphere_ip} -ResourcePool Resources -DiskGB ${var.vsphere_disk} -DiskStorageFormat Thin -DataStore datastore1 -MemoryGB ${var.vsphere_memory}",
 
     ]
   }
