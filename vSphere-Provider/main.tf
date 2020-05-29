@@ -24,7 +24,6 @@ data "vsphere_resource_pool" "pool" {
 }
 
 data "vsphere_network" "network" {
-  name          = "VSwitch0"
   datacenter_id = "${data.vsphere_datacenter.dc.id}"
 }
 
