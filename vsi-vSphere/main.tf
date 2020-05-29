@@ -8,22 +8,10 @@ resource "ibm_compute_ssh_key" "ssh_key_bin" {
   public_key = "${var.ssh_public_key}"
 }
 
-resource "ibm_compute_vm_instance" "terraform_p_sample" {
-  hostname                   = "${var.vm_name}"
-  domain                     = "ibm.cloud-landingzone.com"
-  os_reference_code          = "${var.os_reference}"
-  datacenter                 = "${var.datacenter}"
-  network_speed        = 100
-  hourly_billing       = true
-  private_network_only = false
-  cores                = 1
-  memory               = 1024
-  disks                = [25]
-  local_disk           = false
-  ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
-
+resource "null_resource" "vm_connect" {
   connection {
     type = "ssh"
+    host = "169.48.173.222"
     user = "root"
     private_key = "${var.private_key}"
   }
