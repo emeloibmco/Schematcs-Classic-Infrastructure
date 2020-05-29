@@ -21,8 +21,16 @@ variable "ssh_public_key" {
 
 variable "vm_name" {}
 
-variable "private_key" {
-  
-}
+variable "private_key" {}
+
+variable "vsphere_ip" {}
+
+variable "vsphere_user" {}
+
+variable "vsphere_passwd" {}
+
+variable "vsphere_disk" {}
+
+variable "vsphere_memory" {}
 
 variable "vm_vsphere" {}
