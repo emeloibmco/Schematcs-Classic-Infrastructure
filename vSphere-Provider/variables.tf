@@ -38,4 +38,6 @@ variable "datacenter" {
 
 }
 
+variable "network_name" {}
+
 variable "name_vm" {}
