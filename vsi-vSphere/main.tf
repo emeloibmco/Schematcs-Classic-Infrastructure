@@ -11,7 +11,7 @@ resource "ibm_compute_ssh_key" "ssh_key_bin" {
 resource "null_resource" "vm_connect" {
   connection {
     type = "ssh"
-    host = "169.48.173.222"
+    host = "169.48.173.215"
     user = "root"
     private_key = "${var.private_key}"
   }
