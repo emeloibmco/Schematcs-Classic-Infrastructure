@@ -1,14 +1,5 @@
 
-resource "null_resource" "vpn_client" {
-  
-  provisioner "remote-exec" {
-    inline = [
-      "Hello"
-    ]
-  }
-}
-
-/* provider "vsphere" {
+provider "vsphere" {
   
   user           = "${var.user_vsphere}"
   password       = "${var.vsphere_password}"
@@ -20,4 +11,4 @@ resource "null_resource" "vpn_client" {
 
 data "vsphere_datacenter" "dc" {
   name = "${var.datacenter}"
-} */
+} 
