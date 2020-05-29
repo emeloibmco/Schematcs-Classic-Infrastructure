@@ -37,3 +37,5 @@ variable "ip_address" {
 variable "datacenter" {
 
 }
+
+variable "name_vm" {}
