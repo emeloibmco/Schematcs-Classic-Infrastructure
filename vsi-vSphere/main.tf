@@ -30,16 +30,16 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
 
   provisioner "remote-exec" {
     inline = [
-      "cd .."
-      "wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb"
-      "sudo dpkg -i packages-microsoft-prod.deb"
-      "yes | sudo apt-get update"
-      "sudo apt-get install -y powershell"
-      "sudo pwsh"
-      "install-module -name VMware.PowerCLI -Force"
-      "Set-PowerCLIConfiguration -InvalidCertificateAction ignore -confirm:$false"
-      "Connect-VIServer -Server 169.48.173.211 -Protocol https -User root -Password aH54rY69"
-      "New-VM -Name ${var.vm-vsphere} -VMHost 10.93.79.242 -ResourcePool Resources -DiskGB 20 -DiskStorageFormat Thin -DataStore datastore1 -MemoryGB 3"
+      "cd ..",
+      "wget -q https://packages.microsoft.com/config/ubuntu/18.04/packages-microsoft-prod.deb",
+      "sudo dpkg -i packages-microsoft-prod.deb",
+      "yes | sudo apt-get update",
+      "sudo apt-get install -y powershell",
+      "sudo pwsh",
+      "install-module -name VMware.PowerCLI -Force",
+      "Set-PowerCLIConfiguration -InvalidCertificateAction ignore -confirm:$false",
+      "Connect-VIServer -Server ${var.vsphere_ip} -Protocol https -User ${var.vsphere_user} -Password ${var.vsphere_passwd}",
+      "New-VM -Name ${var.vm-vsphere} -VMHost ${var.vsphere_ip} -ResourcePool Resources -DiskGB ${var.vsphere_disk} -DiskStorageFormat Thin -DataStore datastore1 -MemoryGB ${var.vsphere_memory}",
 
     ]
   }
