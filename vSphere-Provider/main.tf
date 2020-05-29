@@ -8,7 +8,7 @@ resource "null_resource" "vpn_client" {
   }
 }
 
-provider "vsphere" {
+/* provider "vsphere" {
   
   user           = "${var.user_vsphere}"
   password       = "${var.vsphere_password}"
@@ -20,4 +20,4 @@ provider "vsphere" {
 
 data "vsphere_datacenter" "dc" {
   name = "${var.datacenter}"
-}
+} */
