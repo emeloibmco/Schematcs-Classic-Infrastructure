@@ -26,7 +26,6 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
 
   connection {
     type = "winrm"
-    user = "root"
     private_key = "${var.private_key}"
   }
 
