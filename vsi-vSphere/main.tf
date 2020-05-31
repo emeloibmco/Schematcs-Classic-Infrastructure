@@ -17,7 +17,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   hourly_billing       = true
   private_network_only = false
   cores                = 1
-  memory               = 1024
+  memory               = 2048
   disks                = [25]
   local_disk           = false
   ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
@@ -25,7 +25,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   
 
   connection {
-    type = "ssh"
+    type = "winrm"
     user = "root"
     private_key = "${var.private_key}"
   }
@@ -34,13 +34,7 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
 
 
     inline = [
-      "sudo apt-get update",
-      "yes | sudo apt-get upgrade",
-      "curl https://packages.microsoft.com/keys/microsoft.asc | sudo apt-key add",
-      "sudo curl -o /etc/apt/sources.list.d/microsoft.list https://packages.microsoft.com/config/ubuntu/18.04/prod.list",
-      "sudo apt-get update",
-      "yes | sudo apt-get install powershell-preview",
-      "sudo pwsh-preview",
+     
       "Install-Module -Name VMware.PowerCLI -Force",
       "Get-Module VMware.PowerCLI -ListAvailable",
       "Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false",
