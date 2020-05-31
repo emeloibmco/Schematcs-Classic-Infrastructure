@@ -32,9 +32,6 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
 
   provisioner "remote-exec" {
 
-    timeout {
-    create = "20m"
-    }
 
     inline = [
       "sudo apt-get update",
