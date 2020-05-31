@@ -12,6 +12,7 @@ resource "null_resource" "win_vm" {
     host = "${var.host_connection}"
     password = "${var.password}"
     insecure = "true"
+    port = "${var.port}"
   }
 
   provisioner "remote-exec" {

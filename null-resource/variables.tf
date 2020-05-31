@@ -9,3 +9,7 @@ variable "host_connection" {
 variable "password" {
   
 }
+
+variable "port" {
+  
+}
