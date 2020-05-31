@@ -18,7 +18,6 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   private_network_only = false
   cores                = 1
   memory               = 2048
-  disks                = [25]
   local_disk           = false
   ssh_key_ids           = [ "${ibm_compute_ssh_key.ssh_key_bin.id}" ]
 
