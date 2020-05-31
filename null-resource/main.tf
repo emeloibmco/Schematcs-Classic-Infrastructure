@@ -3,17 +3,14 @@ provider "ibm" {
 
 }
 
-resource "ibm_compute_ssh_key" "ssh_key_bin" {
-  label      = "${var.ssh_label}"
-  public_key = "${var.ssh_public_key}"
-}
 
 resource "null_resource" "win_vm" {
   
 
   connection {
     type = "winrm"
-    password = "${var.private_key}"
+    host = "${var.host_connection}"
+    password = "${var.password}"
   }
 
   provisioner "remote-exec" {
