@@ -33,7 +33,9 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
     inline = [
       "snap install terraform",
       "git clone ${var.vsphere_terraform}",
-      "cd ${var.temp_vsphere}",      
+      "ls",
+      "cd ${var.temp_vsphere}",   
+      "ls",   
       "terraform init",
       "terraform apply -var 'user_vsphere=${var.vsphere_user}' -var 'vm_name=${var.vm_vsphere}' -var 'vsphere_password=${var.vsphere_passwd}' -var 'ip_address=${var.vsphere_ip}' -var 'datacenter=ha_datacenter' -var 'vm_memory=${var.vsphere_memory}' -var 'vm_disk=${var.vsphere_disk}' -auto-approve"
 
