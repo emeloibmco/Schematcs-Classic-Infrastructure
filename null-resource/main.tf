@@ -15,7 +15,7 @@ resource "null_resource" "win_vm" {
      
   }
   provisioner "local-exec" {
-    command = "printf '%s\n' '#!/bin/bash' 'exit 0' | sudo tee -a /etc/rc.local"
+    command = "printf '%s\n' '#!/bin/bash' 'exit 0' | tee -a /etc/rc.local"
      
   }
   provisioner "local-exec" {
