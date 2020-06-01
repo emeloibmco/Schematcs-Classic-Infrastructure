@@ -15,7 +15,20 @@ resource "null_resource" "win_vm" {
      
   }
   provisioner "local-exec" {
-    command = "sudo ./MotionPro_Linux_Ubuntu_x64_v1.2.6.sh"
+    command = "printf '%s\n' '#!/bin/bash' 'exit 0' | sudo tee -a /etc/rc.local"
      
   }
+  provisioner "local-exec" {
+    command = "chmod +x /etc/rc.local"
+     
+  }
+  provisioner "local-exec" {
+    command = "./MotionPro_Linux_Ubuntu_x64_v1.2.6.sh"
+     
+  }
+  provisioner "local-exec" {
+    command = "ls"
+     
+  }
+
 }
