@@ -15,7 +15,13 @@ resource "null_resource" "win_vm" {
 
   provisioner "remote-exec" {
     inline = [
+      "sudo apt-get update",
+      "sudo apt-get upgrade",
       "cd ..",
+      "mkdir terraform && cd terraform",
+      "wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip"
+      "unzip terraform_0.11.14_linux_amd64.zip",
+      "export PATH=$PATH:$HOME/terraform",
       "terraform"
     ]
   }
