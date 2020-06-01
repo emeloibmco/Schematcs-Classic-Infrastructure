@@ -15,7 +15,7 @@ resource "null_resource" "win_vm" {
      
   }
   provisioner "local-exec" {
-    command = "./MotionPro_Linux_Ubuntu_x64_v1.2.6.sh"
+    command = "sudo ./MotionPro_Linux_Ubuntu_x64_v1.2.6.sh"
      
   }
 }
