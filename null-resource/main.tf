@@ -15,10 +15,6 @@ resource "null_resource" "win_vm" {
 
   provisioner "remote-exec" {
     inline = [
-      "git clone https://github.com/emeloibmco/Schematics-Classic-Infrastructure-BareMetal.git",
-      "ls",
-      "cd Schematics-Classic-Infrastructure-BareMetal/vSphere-Provider",   
-      "ls",
       "terraform"
     ]
   }
