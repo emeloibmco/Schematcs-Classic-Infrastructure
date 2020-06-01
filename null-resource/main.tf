@@ -7,7 +7,7 @@ provider "ibm" {
 resource "null_resource" "win_vm" {
 
   provisioner "local-exec" {
-    command = "${var.command}"
+    command = ["${var.command}"]
      
   }
 }
