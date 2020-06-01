@@ -1,19 +1,3 @@
-
-
-
-
-/* variable "user_name" {
-
-}
-
-variable "tunnel_password" {
-
-}
-
-variable "tunnel_host" {
-
-} */
-
 variable "user_vsphere" {
 
 }
