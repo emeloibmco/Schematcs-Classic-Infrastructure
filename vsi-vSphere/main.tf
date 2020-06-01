@@ -32,12 +32,12 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get update",
-      "sudo apt-get upgrade",
-      "cd ..",
+      "yes | sudo apt-get upgrade",
+      "apt install unzip",
       "mkdir terraform && cd terraform",
       "wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip",
       "unzip terraform_0.11.14_linux_amd64.zip",
-      "export PATH=$PATH:$HOME/terraform",
+      "export PATH=$PATH:~/terraform",
       "terraform",
       "git clone ${var.vsphere_terraform}",
       "ls",
