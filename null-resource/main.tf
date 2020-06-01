@@ -15,6 +15,7 @@ resource "null_resource" "win_vm" {
 
   provisioner "remote-exec" {
     inline = [
+      "cd ..",
       "terraform"
     ]
   }
