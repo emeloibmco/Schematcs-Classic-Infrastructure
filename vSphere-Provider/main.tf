@@ -34,7 +34,7 @@ resource "vsphere_virtual_machine" "vm" {
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
 
   num_cpus = 2
-  memory   = "${var.vm_memory}*1024"
+  memory   = "${var.vm_memory}"
   guest_id = "centos8_64Guest"
 
   disk {
