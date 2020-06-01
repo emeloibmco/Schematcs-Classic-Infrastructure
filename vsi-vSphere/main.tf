@@ -35,10 +35,10 @@ resource "ibm_compute_vm_instance" "terraform_p_sample" {
       "sudo apt-get upgrade",
       "cd ..",
       "mkdir terraform && cd terraform",
-      "wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip"
+      "wget https://releases.hashicorp.com/terraform/0.11.14/terraform_0.11.14_linux_amd64.zip",
       "unzip terraform_0.11.14_linux_amd64.zip",
       "export PATH=$PATH:$HOME/terraform",
-      "terraform"
+      "terraform",
       "git clone ${var.vsphere_terraform}",
       "ls",
       "cd ${var.temp_vsphere}",   
