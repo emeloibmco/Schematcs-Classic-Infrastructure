@@ -13,4 +13,13 @@ variable "ip_address" {
 variable "datacenter" {
 
 }
+variable "vm_memory" {
+
+}
+
+variable "vm_disk" {
+    
+}
+
+
 

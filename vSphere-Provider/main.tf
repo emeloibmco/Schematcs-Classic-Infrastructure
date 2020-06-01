@@ -34,16 +34,16 @@ resource "vsphere_virtual_machine" "vm" {
   datastore_id     = "${data.vsphere_datastore.datastore.id}"
 
   num_cpus = 2
-  memory   = 1024
+  memory   = ${var.vm_memory}*1024
   guest_id = "centos8_64Guest"
+
+  disk {
+    label       = "disk1"
+    size        = "${var.vm_disk"}"
+  }
 
   network_interface {
     network_id = "${data.vsphere_network.network.id}"
-  }
-
-  disk {
-    label = "disk0"
-    size  = 20
   }
 }
 
