@@ -16,7 +16,7 @@ resource "null_resource" "win_vm" {
   provisioner "remote-exec" {
     inline = [
       "sudo apt-get update",
-      "terraform"
+      "terraform version"
     ]
   }
 }
