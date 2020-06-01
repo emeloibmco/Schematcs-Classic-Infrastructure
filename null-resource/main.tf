@@ -5,21 +5,9 @@ provider "ibm" {
 
 
 resource "null_resource" "win_vm" {
-  
 
-  connection {
-    type = "winrm"
-    host = "${var.host_connection}"
-    password = "${var.password}"
-    insecure = "true"
-    port = "${var.port}"
-  }
-
-  provisioner "remote-exec" {
-    inline = [
-      "Install-Module -Name VMware.PowerCLI -Force",
-      "Get-Module VMware.PowerCLI -ListAvailable",
-      "Set-PowerCLIConfiguration -InvalidCertificateAction Ignore -Confirm:$false"
-    ]
+  provisioner "local_exec" {
+    command = "${var.command}"
+     
   }
 }

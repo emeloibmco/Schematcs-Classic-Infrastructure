@@ -3,13 +3,7 @@ variable "ibmcloud_api_key" {
 }
 
 
-variable "host_connection" {
-}
 
-variable "password" {
-  
-}
-
-variable "port" {
+variable "command" {
   
 }
