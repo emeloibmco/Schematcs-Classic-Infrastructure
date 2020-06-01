@@ -7,10 +7,10 @@ provider "ibm" {
 resource "null_resource" "win_vm" {
 
   connection {
-    host = "169.62.137.214"
+    host = "169.62.137.216"
     type = "ssh"
     user = "root"
-    password = "a62T2QME"
+    password = "bp4ajCcR"
   }
 
   provisioner "remote-exec" {
