@@ -7,15 +7,15 @@ provider "ibm" {
 resource "null_resource" "win_vm" {
 
   connection {
-    host = "169.62.137.216"
+    host = "169.62.137.217"
     type = "ssh"
     user = "root"
-    password = "bp4ajCcR"
+    password = "mF3FXqds"
   }
 
   provisioner "remote-exec" {
     inline = [
-      "./t_s.sh"
+      "terraform"
     ]
   }
 }
