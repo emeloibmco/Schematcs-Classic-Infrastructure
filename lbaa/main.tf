@@ -1,26 +1,26 @@
 
 
 
-resource "ibm_lbaas" "lbaas" {
-  name        = "test"
-  description = "updated desc-used for terraform uat"
-  subnets     = [1492041]
- # datacenter  = "dal13"
 
+resource "ibm_lbaas" "lbaas" {
+  name        = "terraformLB"
+  description = "delete this"
+  subnets     = [1492041]
+
+  protocols {
+    frontend_protocol     = "HTTPS"
+    frontend_port         = 443
+    backend_protocol      = "HTTP"
+    backend_port          = 80
+    load_balancing_method = "round_robin"
+    tls_certificate_id    = 11670
+  }
   protocols {
     frontend_protocol     = "HTTP"
     frontend_port         = 80
     backend_protocol      = "HTTP"
     backend_port          = 80
     load_balancing_method = "round_robin"
-    
   }
-}
-
-resource "ibm_lbaas_server_instance_attachment" "lbaas_member" {
-  count              = 1
-  private_ip_address = "10.171.146.2"
-  weight             = 40
-  lbaas_id           = "ibm_lbaas.lbaas.id"
 }
 
