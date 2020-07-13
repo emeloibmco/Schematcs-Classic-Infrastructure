@@ -8,7 +8,6 @@ _Este repositorio cuenta con la guia para diversas aplicaciones de Classic Infra
 
 1. BareMetal Code guide
 2. BareMetal-SAP HANA guide
-3. vSphere with VMware solutions guide
 
 
 ### Referencias
