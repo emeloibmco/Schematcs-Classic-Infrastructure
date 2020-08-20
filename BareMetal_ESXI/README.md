@@ -1,14 +1,17 @@
-# BareMetal-SAP - Schematics IBM Cloud
+# BareMetal-ESX VMware - Schematics IBM Cloud
 
-_Ejemplo de BareMetal-SAP con facturación por **MENSUAL** en Infraestructura clásica usando IaC en Schematics con el provider de Terraform_
+_Ejemplo de BareMetal con ESXI par virtualización VMware con facturación por **MENSUAL** en Infraestructura clásica usando IaC en Schematics con el provider de Terraform_
 
-<img width="940" alt="BareMetal-Architecture" src="images/baremetal.jpg">
+## Introducción 
+
+VMware ESXi (anteriormente VMware ESX) es una plataforma de virtualización a nivel de centro de datos producido por VMware, Inc.
 
 ## Comenzando 🚀
 
 _Instrucciones_
 
-Para el aprovisionamiento de un BareMetal-SAP se requiere facturación mensual la cual cuenta con minimo 3 archivos en GITHUB los cuales son:
+Para el aprovisionamiento de un BareMetal-ESXI se requiere facturación mensual y configuración de capacidades que soporten este OS.
+Los archivos necesarios para la configuración de IaC son los siguientes:
 - variable.tf = Contiene las variables de llaves y nombres unicos que el cliente introduce en su servicio
 - main.tf = Archivo principal que contiene las funciones de aprovisionamiento de recursos 
 - provider.tf = Instalador de provider IBM sobre Schematics
@@ -34,31 +37,29 @@ El aprovisionamiento de un BareMetal mensual con el provider terraform cuenta co
 | **notes** | Notas de información del BareMetal |
 
 
-Para acceder a información de **api softlayer** se requiere de la [APIkey-ClassicInfrastructure](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys&locale=es) y el usuario de la cuenta 
+Para acceder a información de **api softlayer** se requiere de la [APIkey-ClassicInfrastructure](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys&locale=es) y el usuario de la cuenta EJ: **22222_user@ibm.com**
 
 La variable **bm_os_reference_code** cuenta con las siguientes opciones para SAP - Certified
 
-- OS_WINDOWS_SERVER_2019_DATACENTER_EDITION_64BIT ( Windows Server 2019 Datacenter Edition (64 bit) )
-- OS_WINDOWS_2016_FULL_STD_64_BIT ( Windows Server 2016 Standard Edition (64 bit) )
-- OS_WINDOWS_SERVER_2016_DATACENTER_EDITION_64_BIT (  Windows Server 2016 Datacenter Edition (64 bit) )
-- OS_WINDOWS_SERVER_2016_DATACENTER_EDITION_64_BIT (  Windows Server 2016 Datacenter Edition (64 bit) )
-- OS_RHEL_FOR_SAP_BUSINESS_APPLICATION_7_X_64_BIT ( Red Hat Enterprise Linux for SAP Business Application 7.x (64 bit) ) 
-- OS_RHEL_FOR_SAP_BUSINESS_APPLICATION_6_5_64_BIT ( Red Hat Enterprise Linux for SAP Business Application 6.x (64 bit) )
-- OS_SUSE_LINUX_ENTERPRISE_SERVER_15_FOR_SAP_APPLICATIONS ( SUSE Linux Enterprise Server 15 for SAP Applications )
-- OS_SUSE_LINUX_ENTERPRISE_SERVER_12_SP2_FOR_SAP_APPLICATIONS ( SUSE Linux Enterprise Server 12 SP2 for SAP Applications  ) 
+- OS_VMWARE_SERVER_VIRTUALIZATION_6_5_0_U2 ( VMware Server Virtualization 6.5 Update 2 )
+- OS_VMWARE_SERVER_VIRTUALIZATION_6_5_UPDATE_1G ( VMware Server Virtualization 6.5 Update 1g )
 
 El atributo **disk_key_name** cuenta con las siguientes opciones
 
+- HARD_DRIVE_1_00_TB_SATA_2 ( 1.00 TB SATA )
+- HARD_DRIVE_2_00_TB_SATA_2 ( 2.00 TB SATA )
+- HARD_DRIVE_3_00_TB_SATA ( 3.00 TB SATA )
 - HARD_DRIVE_1_7_TB_SSD_3_DWPD ( 1.7TB SSD (3 DWPD) ) 
+- HARD_DRIVE_3_8TB_SSD_SED_3DWPD ( 3.8TB SSD SED (3DWPD) )
+- HARD_DRIVE_2_00_TB_SATA_2_BMR_1U_1YR_TERM ( 2.00 TB SATA )
+- HARD_DRIVE_7_68TB_SSD_1DWPD ( 7.68TB SSD )
 - HARD_DRIVE_8_00_TB_SATA ( 8.00 TB SATA  ) 
 - HARD_DRIVE_960GB_SSD ( 960GB SSD (3 DWPD) ) 
 - HARD_DRIVE_4_00TB_SATA_III ( 4.00 TB SATA  ) 
 - HARD_DRIVE_600_GB_SAS_15K_RPM ( 600 GB SAS (15K RPM) ) 
 - HARD_DRIVE_960GB_SSD_SED_5DWPD ( 960GB SSD SED (5DWPD) ) 
 - HARD_DRIVE_800GB_SSD ( 800GB SSD (10 DWPD) )
-- HARD_DRIVE_1_2_TB_SSD_10_DWPD ( 1.2TB SSD (10 DWPD) ) 
-- HARD_DRIVE_1_9TB_SSD_SED_5DWPD ( 1.9TB SSD SED (5DWPD) ) 
-- HARD_DRIVE_2_00_TB_SATA_2 ( 2.00 TB SATA )
+- HARD_DRIVE_7_68TB_SSD_SED_1DWPD ( 7.68TB SSD SED ) 
 
 ### Pasos para el despliegue en Schematics 🔧
 
