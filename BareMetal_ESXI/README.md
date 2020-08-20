@@ -41,7 +41,7 @@ El aprovisionamiento de un BareMetal mensual con el provider terraform cuenta co
 
 Para acceder a información de **api softlayer** se requiere de la [APIkey-ClassicInfrastructure](https://cloud.ibm.com/docs/iam?topic=iam-classic_keys&locale=es) y el usuario de la cuenta EJ: **22222_user@ibm.com**
 
-La variable **bm_os_reference_code** cuenta con las siguientes opciones para SAP - Certified
+La variable **bm_os_reference_code** cuenta con las siguientes opciones para configuración ESXI en un BareMetal:
 
 - OS_VMWARE_SERVER_VIRTUALIZATION_6_5_0_U2 ( VMware Server Virtualization 6.5 Update 2 )
 - OS_VMWARE_SERVER_VIRTUALIZATION_6_5_UPDATE_1G ( VMware Server Virtualization 6.5 Update 1g )
