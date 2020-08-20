@@ -12,7 +12,7 @@ variable "bm_hostname" {
 }
 
 variable "bm_os_reference_code" {
-  description = "More info in Readme" 
+  description = "OS_VMWARE_SERVER_VIRTUALIZATION_6_5_0_U2 / OS_VMWARE_SERVER_VIRTUALIZATION_6_5_UPDATE_1G" 
 }
 
 variable "datacenter" {
