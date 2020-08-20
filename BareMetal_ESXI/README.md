@@ -2,6 +2,8 @@
 
 _Ejemplo de BareMetal con ESXI par virtualización VMware con facturación por **MENSUAL** en Infraestructura clásica usando IaC en Schematics con el provider de Terraform_
 
+<img width="945" alt="workspace" src="images/ESX_BareMetal.PNG">
+
 ## Introducción 
 
 VMware ESXi (anteriormente VMware ESX) es una plataforma de virtualización a nivel de centro de datos producido por VMware, Inc.
