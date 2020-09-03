@@ -16,14 +16,10 @@ variable "bm_domain" {
   default = "baremetal-sap01.ibm.com"
 }
 
-/*
+
 variable resource_group {
   description = "Name of resource group to provision resources"
   default     = "Default"
-}
-
-variable "bm_hostname" {
-  default = "BareMetal01"
 }
 
 variable "bm_os_reference_code" {
@@ -54,4 +50,3 @@ variable "notes_bm" {
 variable "hourly_billing" {
   default = "true"
 }
- */
