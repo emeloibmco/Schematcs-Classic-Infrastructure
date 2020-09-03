@@ -1,4 +1,12 @@
-variable ibmcloud_apikey {
+variable "bm_hostname" {
+  default = "BareMetal01"
+}
+
+
+variable "bm_domain" {
+  default = "baremetal-sap01.ibm.com"
+}
+/* variable ibmcloud_apikey {
   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
 }
 
@@ -25,11 +33,6 @@ variable "datacenter" {
   default = "dal06"
 }
 
-
-variable "bm_domain" {
-  default = "baremetal-sap01.ibm.com"
-}
-
 variable "bm_network_speed" {
   default = 100
 }
@@ -49,3 +52,4 @@ variable "notes_bm" {
 variable "hourly_billing" {
   default = "true"
 }
+ */

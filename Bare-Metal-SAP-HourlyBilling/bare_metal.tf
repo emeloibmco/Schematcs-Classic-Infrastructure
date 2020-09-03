@@ -1,4 +1,4 @@
-resource "ibm_compute_bare_metal" "baremetal01" {
+/* resource "ibm_compute_bare_metal" "baremetal01" {
   hostname                   = "${var.bm_hostname}"
   domain                     = "${var.bm_domain}"
   os_reference_code          = "${var.bm_os_reference_code}"
@@ -9,4 +9,10 @@ resource "ibm_compute_bare_metal" "baremetal01" {
   fixed_config_preset        = "${var.processor}"
   notes                      = "${var.notes_bm}"
 
+}
+ */
+
+data "ibm_compute_bare_metal" "bare_metal" {
+  hostname    = "${var.bm_hostname}"
+  domain      = "${var.bm_domain}"
 }
