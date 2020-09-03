@@ -38,7 +38,9 @@ variable "private_network" {
   description = "true or false"
   default = "false"
 }
-
+variable "processor" {
+  description = "Minimum processor Hourly_billing 1U_1270_V3_2X2TB_NORAID - More info: https://api.softlayer.com/rest/v3/SoftLayer_Hardware/getCreateObjectOptions.json "
+}
 
 variable "notes_bm" {
   default = "test"
