@@ -1,12 +1,4 @@
-variable "bm_hostname" {
-  default = "BareMetal01"
-}
-
-
-variable "bm_domain" {
-  default = "baremetal-sap01.ibm.com"
-}
-/* variable ibmcloud_apikey {
+variable ibmcloud_apikey {
   description = "The IBM Cloud platform API key needed to deploy IAM enabled resources"
 }
 
@@ -15,6 +7,16 @@ variable ibm_region {
   default     = "us-south"
 }
 
+variable "bm_hostname" {
+  default = "BareMetal01"
+}
+
+
+variable "bm_domain" {
+  default = "baremetal-sap01.ibm.com"
+}
+
+/*
 variable resource_group {
   description = "Name of resource group to provision resources"
   default     = "Default"
